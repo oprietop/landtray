@@ -294,18 +294,6 @@ var nokIcon []byte = []byte{
 	0x4e, 0x44, 0xae, 0x42, 0x60, 0x82,
 }
 
-func createLockFile(filename string) (*os.File, error) {
-	file, err := os.OpenFile(filename, os.O_WRONLY, 0666)
-	if err != nil {
-		return nil, err
-	}
-	err = syscall.Flock(int(file.Fd()), syscall.LOCK_EX|syscall.LOCK_NB)
-	if err != nil {
-		return nil, err
-	}
-	return file, nil
-}
-
 func status(items map[string]*systray.MenuItem) {
 	// Ous status is ok on default
 	ok := true
