@@ -7,7 +7,6 @@ import (
 	"github.com/marcsauter/single"
 	"os"
 	"strings"
-	"syscall"
 	"time"
 )
 
