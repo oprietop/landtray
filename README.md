@@ -10,5 +10,5 @@ go get .
 go run landtray.go
 ```
 ## Thanks
-https://github.com/getlantern/systray
+https://github.com/getlantern/systray   
 https://github.com/marcsauter/single
